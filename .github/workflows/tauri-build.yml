@@ -5,8 +5,7 @@ on:
     branches:
       - main
 
-
-  jobs:
+jobs:
   build:
     runs-on: macos-latest
 
@@ -28,11 +27,10 @@ on:
       - name: Build Tauri app
         run: npm run tauri build
 
-      # 🧱 Upload only the generated DMG (mac installer)
       - name: Upload macOS installer
         uses: actions/upload-artifact@v4
-       with:
-  name: macos-builds
-  path: |
-    src-tauri/target/release/bundle/macos/*.dmg
-    src-tauri/target/release/bundle/macos/*.app
+        with:
+        name: macos-builds
+        path: |
+          src-tauri/target/release/bundle/macos/*.dmg
+          src-tauri/target/release/bundle/macos/*.app
