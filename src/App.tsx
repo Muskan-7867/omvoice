@@ -197,10 +197,12 @@ export default function ProfessionalInvoice() {
               <CardTitle className="text-2xl text-primary">
                 Invoice Details
               </CardTitle>
+              
               <CardAction>
                 <Button variant={"ghost"} className="text-red-400" onClick={resetForm}>
                   Clear
                 </Button>
+
               </CardAction>
             </CardHeader>
             <CardContent className="p-6 space-y-6">
