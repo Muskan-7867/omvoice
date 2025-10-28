@@ -2,8 +2,8 @@ name: Build Tauri App
 
 on:
   push:
-    tags:
-      - 'v*.*.*'  # builds when you push version tags like v1.0.0
+    branches:
+      - main
 
 jobs:
   build:
